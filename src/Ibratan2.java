@@ -1,4 +1,4 @@
-public class Ibrantan {
+public class Ibratan2 {
     public static void main(String[] args) {
         int numeros[] = {5, 8, 7, 9, 2, 5, 3};
 

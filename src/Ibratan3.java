@@ -1,11 +1,11 @@
 import javax.swing.*;
 import java.text.DecimalFormat;
 
-public class AprovaCredito {
+public class Ibratan3 {
     public static void main(String[] args) {
         DecimalFormat form = new DecimalFormat("#00.00");
 
-        double renda,parcela,fatorAprovador = 40,fatorReal;
+        double renda, parcela, fatorAprovador = 40, fatorReal;
 
         renda = Double.parseDouble(JOptionPane.showInputDialog
                 ("Informe sua renda"));
@@ -14,14 +14,16 @@ public class AprovaCredito {
 
         fatorReal = (parcela * 100) / renda;
 
-        if(fatorReal <= fatorAprovador){
+        if (fatorReal <= fatorAprovador) {
             JOptionPane.showMessageDialog
-                    (null,"Parabéns, crédito aprovado");
-        }else {
+                    (null, "Percentual da renda comprometido pela parcela " + form.format(fatorReal) + "%");
             JOptionPane.showMessageDialog
-                    (null,"Percentual da renda comprometido pela parcela "+form.format(fatorReal)+"%");
+                    (null, "Parabéns, crédito aprovado");
+        } else {
             JOptionPane.showMessageDialog
-                    (null,"Infelizmente seu crédito não será aprovado");
+                    (null, "Percentual da renda comprometido pela parcela " + form.format(fatorReal) + "%");
+            JOptionPane.showMessageDialog
+                    (null, "Infelizmente seu crédito não será aprovado");
         }
 
     }
